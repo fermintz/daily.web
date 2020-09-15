@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "prebuild": "set NODE_ENV=production",
     "build": "vue-cli-service build",
+    "postbuild": "scp -r ./dist/* root@dailywash.co.kr:/web/www.dailywash.co.kr",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
