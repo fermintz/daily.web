@@ -1,30 +1,52 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "../views/home.vue";
+import About from "../views/about.vue";
+import How from "../views/how.vue";
+import Customer from "../views/customer.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "home",
+    component: Home,
+    meta:{
+      pageTitle:'홈',
+    }
   },
   {
     path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    name: "about",
+    component: About,
+    meta:{
+      pageTitle:'데일리세탁',
+    }
+  },
+  {
+    path: "/how",
+    name: "how",
+    component: How,
+    meta:{
+      pageTitle:'이용안내',
+    }
+  },
+  {
+    path: "/customer",
+    name: "customer",
+    component: Customer,
+    meta:{
+      pageTitle:'자주묻는 질문',
+    }
   }
 ];
+
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;
