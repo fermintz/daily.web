@@ -1,17 +1,12 @@
 <template>
-  <div
-    class="footer"
-    :class="{ active: absolute }"
-    v-if="(visible || absolute)"
-  >
+  <div class="footer" :class="{ active: absolute }" v-if="visible || absolute">
     <div class="company">
       <span
         >(주)페이오티 | 서비스명: 데일리세탁 | 대표: 차경진 | 사업자등록번호:
         599-81-00659</span
       >
       <span
-        >주소: 부산광역시 금정구 부산대학로 63번길 2 과학기술연구동
-        201호</span
+        >주소: 부산광역시 금정구 부산대학로 63번길 2 과학기술연구동 201호</span
       >
       <span
         >이메일: cs@dailywash.co.kr | 전화 070-7807-6857 | FAX:
@@ -19,8 +14,10 @@
       >
     </div>
     <div class="btns">
-      <v-btn text>개인정보수집 및 이용동의 약관</v-btn>
-      <v-btn text>서비스 이용약관</v-btn>
+      <v-btn @click="$refs.agreeModal.show('person')" text
+        >개인정보수집 및 이용동의 약관</v-btn
+      >
+      <v-btn @click="$refs.agreeModal.show('service')" text>서비스 이용약관</v-btn>
       <!-- <v-btn icon>
         <v-icon>mdi-account-supervisor-circle</v-icon>
       </v-btn>
@@ -32,21 +29,19 @@
       </v-btn> -->
     </div>
 
-    <TermsModal :modal="true"/>
+    <TermsModal ref="agreeModal" />
   </div>
 </template>
 
 <script>
-import TermsModal from '@/components/modal/terms.vue'; 
+import TermsModal from "@/components/modal/terms.vue";
 
 export default {
-  props:[
-    'visible','absolute',
-  ],
-  components:{
+  props: ["visible", "absolute"],
+  components: {
     TermsModal,
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -84,9 +79,9 @@ export default {
 }
 
 .active {
-  position:absolute;
+  position: absolute;
   animation: footerFade 1s forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
   opacity: 0;
   background: rgba(0, 0, 0, 0.6);
   @keyframes footerFade {

@@ -1,24 +1,15 @@
 <template>
-  <v-dialog
-    v-model="this.modal"
-    max-width="900"
-  >
+  <v-dialog v-model="visible" max-width="900">
     <v-card>
       <v-card-title class="headline">
-        개인정보수집 및 이용동의 약관
+        {{ title }}
       </v-card-title>
 
-      <v-card-text>
-        안녕하센요
-      </v-card-text>
+      <v-card-text v-html="description" />
 
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn
-          color="green darken-1"
-          text
-          @click="dialog = false"
-        >
+        <v-btn text @click="visible = false">
           닫기
         </v-btn>
       </v-card-actions>
@@ -27,9 +18,22 @@
 </template>
 
 <script>
+import docs from "@/assets/docs/agree.js";
+
 export default {
-  props:[
-    'modal'
-  ],
-}
+  data() {
+    return {
+      visible: false,
+      title: '',
+      description: "",
+    };
+  },
+  methods: {
+    show(type) {
+      this.title = type === 'person' ? '개인정보 이용약관' : '서비스 이용약관';
+      this.description = docs[type].replace(/\n/g, '<br />');
+      this.visible = true;
+    },
+  },
+};
 </script>

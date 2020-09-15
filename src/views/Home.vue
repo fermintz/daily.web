@@ -146,7 +146,6 @@ export default {
       document.getelement
     },
     visualWheel(event) {
-      console.log(event);
       const delta = Math.sign(event.deltaY);
       this.scrollChange(delta === 1 ? 1 : -1);
     },
@@ -262,7 +261,7 @@ export default {
     position: absolute;
     right: 30px;
     top: 50%;
-    z-index: 999;
+    z-index: 9;
     transform: translateY(-50%);
 
     span {
