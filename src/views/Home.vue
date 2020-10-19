@@ -1,5 +1,5 @@
 <template>
-  <div class="home" >
+  <div class="home">
     <v-carousel
       vertical
       :cycle="false"
@@ -21,22 +21,22 @@
               <span>데일리세탁</span>
             </div>
             <div class="btns">
-              <v-btn outlined>
+              <v-btn outlined @click="warpDownLoadLink('android')">
                 <img src="@/assets/img/play-logo.png" />
                 <span>플레이스토어</span>
                 <v-icon>mdi-arrow-right</v-icon>
               </v-btn>
-              <v-btn outlined>    
+              <v-btn outlined>
                 <img src="@/assets/img/apple-logo.png" />
                 <span>앱스토어</span>
-                <v-icon>mdi-arrow-right</v-icon>     
+                <v-icon>mdi-arrow-right</v-icon>
               </v-btn>
             </div>
           </div>
           <div class="slide-bg fill-height">
             <v-img height="100%" src="@/assets/img/slide-bg01.jpg"></v-img>
           </div>
-          <div class="black"/>
+          <div class="black" />
         </div>
       </v-carousel-item>
       <v-carousel-item>
@@ -56,7 +56,7 @@
           <div class="slide-bg fill-height">
             <v-img height="100%" src="@/assets/img/slide-bg02.jpg"></v-img>
           </div>
-          <div class="black"/>
+          <div class="black" />
         </div>
       </v-carousel-item>
       <v-carousel-item>
@@ -76,7 +76,7 @@
           <div class="slide-bg fill-height">
             <v-img height="100%" src="@/assets/img/slide-bg03.jpg"></v-img>
           </div>
-          <div class="black"/>
+          <div class="black" />
         </div>
       </v-carousel-item>
       <v-carousel-item>
@@ -96,7 +96,7 @@
           <div class="slide-bg fill-height">
             <v-img height="100%" src="@/assets/img/slide-bg04.jpg"></v-img>
           </div>
-          <div class="black"/>
+          <div class="black" />
         </div>
       </v-carousel-item>
     </v-carousel>
@@ -109,12 +109,12 @@
         v-ripple
       />
     </div>
-    <Footer :absolute="this.mainVisual === 3"/>
+    <Footer :absolute="this.mainVisual === 3" />
   </div>
 </template>
 
 <script>
-import { throttle, debounce } from "lodash";
+import { throttle, debounce } from 'lodash';
 import Footer from '@/components/footer.vue';
 
 // @ is an alias to /src
@@ -122,28 +122,28 @@ let visualHeightEvent;
 let mouseWheelEvent;
 
 export default {
-  components:{
+  components: {
     Footer,
   },
   data() {
     return {
-      colors: ["primary", "secondary", "yellow darken-2", "red"],
+      colors: ['primary', 'secondary', 'yellow darken-2', 'red'],
       visualHeight: window.innerHeight,
       mainVisual: 0,
     };
   },
   mounted() {
     visualHeightEvent = window.addEventListener(
-      "resize",
-      this.screenHeightWatch
+      'resize',
+      this.screenHeightWatch,
     );
-    mouseWheelEvent = window.addEventListener("mousewheel", this.visualWheel);
+    mouseWheelEvent = window.addEventListener('mousewheel', this.visualWheel);
   },
 
   methods: {
     screenHeightWatch() {
       this.visualHeight = window.innerHeight;
-      document.getelement
+      document.getelement;
     },
     visualWheel(event) {
       const delta = Math.sign(event.deltaY);
@@ -153,6 +153,13 @@ export default {
       if (this.mainVisual === 3 && index === 1) return;
       this.mainVisual += index;
     }, 1 * 100),
+    warpDownLoadLink(platform) {
+      const url =
+        platform === 'android'
+          ? 'https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=kr.co.dailywash&ddl=1&pcampaignid=web_ddl_1'
+          : '';
+      window.open(url, '_top');
+    },
   },
 
   destroy() {
@@ -172,9 +179,8 @@ export default {
     &-leave-active {
       transition: 1s cubic-bezier(0.25, 0.8, 0.5, 1) !important;
     }
-  }  
+  }
 }
-
 
 .home {
   .slide-item {
@@ -183,11 +189,11 @@ export default {
     justify-content: center;
     color: #292929;
 
-    .black{
-      position:absolute;
-      z-index:9;
-      width:100%;
-      height:100%;
+    .black {
+      position: absolute;
+      z-index: 9;
+      width: 100%;
+      height: 100%;
       opacity: 0.25;
     }
 
@@ -195,34 +201,33 @@ export default {
       position: absolute;
       left: 5%;
       z-index: 99;
-      padding:30px;
-      border-radius:10px;
+      padding: 30px;
+      border-radius: 10px;
       animation: slideUp 1s forwards;
-      animation-delay: .5s;
-      margin-top:150px;
-      opacity:0;
+      animation-delay: 0.5s;
+      margin-top: 150px;
+      opacity: 0;
 
-      .text {        
-        color:#fff;
-        text-shadow: 0 0 15px rgba(0,0,0,0.1);
+      .text {
+        color: #fff;
+        text-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
         span {
           display: block;
           font-size: 7rem;
           line-height: 6rem;
-          font-family: "cafe24";
+          font-family: 'cafe24';
           margin: 15px 0;
         }
         strong {
           display: block;
           font-size: 3.5rem;
           line-height: 4rem;
-          
         }
       }
 
       .btns {
-        margin-top: 50px;      
+        margin-top: 50px;
 
         .v-btn {
           color: #fff;
@@ -230,12 +235,12 @@ export default {
           margin-right: 10px;
           font-size: 16px;
           margin-bottom: 10px;
-          height:auto;
-          min-height:auto;
-          padding:10px;
+          height: auto;
+          min-height: auto;
+          padding: 10px;
 
           img {
-            display:block;
+            display: block;
             height: 24px;
             margin-right: 5px;
           }
@@ -243,14 +248,14 @@ export default {
           .v-icon {
             font-size: 20px;
             margin-left: 10px;
-            color:rgba(255,255,255,0.5)
+            color: rgba(255, 255, 255, 0.5);
           }
         }
       }
 
       @keyframes slideUp {
-        100%{
-          margin-top: 0px;;
+        100% {
+          margin-top: 0px;
           opacity: 1;
         }
       }
@@ -288,10 +293,6 @@ export default {
       cursor: pointer;
     }
   }
-
-  
-
-  
 }
 
 @media screen and(max-width:960px) {
@@ -308,7 +309,7 @@ export default {
             display: block;
             font-size: 4.5rem;
             line-height: 4.5rem;
-            font-family: "cafe24";
+            font-family: 'cafe24';
             margin: 15px 0;
           }
           strong {

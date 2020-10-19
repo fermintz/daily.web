@@ -141,9 +141,9 @@ export default {
   data() {
     return {
       truck: false,
-      videoAnimaeted:false,
-      fadeOn:false,
-      onImage:false,
+      videoAnimaeted: false,
+      fadeOn: false,
+      onImage: false,
     };
   },
   methods: {
