@@ -1,0 +1,201 @@
+[
+  {
+    "category": "물빨래",
+    "product": [
+      {
+        "name": "50L 생활 물빨래",
+        "userAmount": 12900
+      },
+      {
+        "name": "80L 생활 물빨래",
+        "userAmount": 19900
+      }
+    ]
+  },
+  {
+    "category": "상의",
+    "product": [
+      {
+        "name": "와이셔츠",
+        "userAmount": 1800
+      },
+      {
+        "name": "교복셔츠",
+        "userAmount": 1800
+      },
+      {
+        "name": "일반 티셔츠",
+        "userAmount": 2900
+      },
+      {
+        "name": "셔츠 / 블라우스",
+        "userAmount": 3900
+      },
+      {
+        "name": "원피스 / 점프슈트",
+        "userAmount": 5900
+      },
+      {
+        "name": "맨투맨 / 후드티",
+        "userAmount": 3900
+      },
+      {
+        "name": "니트 / 스웨터 / 가디건",
+        "userAmount": 5900
+      },
+      {
+        "name": "기능성 상의",
+        "userAmount": 8900
+      }
+    ]
+  },
+  {
+    "category": "상의 외투",
+    "product": [
+      {
+        "name": "정장/교복 자켓",
+        "userAmount": 7900
+      },
+      {
+        "name": "일반 점퍼",
+        "userAmount": 5900
+      },
+      {
+        "name": "코트 / 트랜치코트",
+        "userAmount": 12900
+      },
+      {
+        "name": "경량패딩류",
+        "userAmount": 11900
+      },
+      {
+        "name": "다운패딩류",
+        "userAmount": 15900
+      },
+      {
+        "name": "인조가죽 자켓류",
+        "userAmount": 15900
+      },
+      {
+        "name": "기능성 상의류",
+        "userAmount": 14900
+      }
+    ]
+  },
+  {
+    "category": "하의",
+    "product": [
+      {
+        "name": "바지 / 스커트",
+        "userAmount": 4900
+      },
+      {
+        "name": "정장류 하의",
+        "userAmount": 3900
+      },
+      {
+        "name": "기능성 하의",
+        "userAmount": 7900
+      },
+      {
+        "name": "인조가죽 하의",
+        "userAmount": 12900
+      }
+    ]
+  },
+  {
+    "category": "침구류",
+    "product": [
+      {
+        "name": "일반이불 (물빨래)",
+        "userAmount": 11900
+      },
+      {
+        "name": "이불패드 / 이불커버",
+        "userAmount": 14900
+      },
+      {
+        "name": "극세사 이불",
+        "userAmount": 14900
+      },
+      {
+        "name": "다운퍼 이불 (오리 / 거위털)",
+        "userAmount": 23900
+      },
+      {
+        "name": "일반토퍼",
+        "userAmount": 12900
+      },
+      {
+        "name": "구스토퍼",
+        "userAmount": 14900
+      },
+      {
+        "name": "린넨이불",
+        "userAmount": 14900
+      },
+      {
+        "name": "양모이불",
+        "userAmount": 23900
+      },
+      {
+        "name": "베게커버",
+        "userAmount": 1900
+      }
+    ]
+  },
+  {
+    "category": "커튼/카펫/러그 등",
+    "product": [
+      {
+        "name": "일반 커튼(2m 이하)",
+        "userAmount": 14900
+      },
+      {
+        "name": "일반 커튼(3m 이하)",
+        "userAmount": 17900
+      },
+      {
+        "name": "암막 커튼(2m 이하)",
+        "userAmount": 14900
+      },
+      {
+        "name": "암막 커튼(3m 이하)",
+        "userAmount": 17900
+      },
+      {
+        "name": "쇼파커버",
+        "userAmount": 4900
+      }
+    ]
+  },
+  {
+    "category": "신발류/기타",
+    "product": [
+      {
+        "name": "일반 운동화 (물빨래)",
+        "userAmount": 4900
+      },
+      {
+        "name": "운동화 (세무부분 포함)",
+        "userAmount": 6900
+      },
+      {
+        "name": "스포츠화 / 등산화",
+        "userAmount": 4900
+      },
+      {
+        "name": "넥타이",
+        "userAmount": 3900
+      },
+      {
+        "name": "목도리 / 스카프",
+        "userAmount": 3900
+      },
+      {
+        "name": "캡 모자",
+        "userAmount": 4900
+      }
+    ]
+  }
+]
